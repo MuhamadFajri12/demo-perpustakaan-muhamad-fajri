@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane style="-fx-background-color: white" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.demodesktop.controller.ProductListController">
+    <top>
+        <HBox alignment="CENTER_LEFT" prefHeight="40.0">
+            <Button fx:id="createProductButton" alignment="TOP_CENTER" mnemonicParsing="false" onAction="#handleCreateProduct" style="-fx-background-color: green; -fx-text-fill: white;" text="Tambah Buku">
+                <HBox.margin>
+                    <Insets left="5.0" top="5.0" />
+                </HBox.margin>
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </Button>
+            <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+            <Button fx:id="logoutButton" mnemonicParsing="false" onAction="#handleLogout" style="-fx-background-color: red;" text="Keluar">
+                <font>
+                    <Font size="14.0" />
+                </font>
+                <HBox.margin>
+                    <Insets right="5.0" top="5.0" />
+                </HBox.margin>
+            </Button>
+        </HBox>
+    </top>
+    <center>
+        <TableView fx:id="productTableView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <columns>
+                <TableColumn fx:id="productCodeColumn" text="Judul Buku" />
+                <TableColumn fx:id="nameColumn" text="Penerbit" />
+                <TableColumn fx:id="priceColumn" text="Harga" />
+                <TableColumn fx:id="descriptionColumn" text="Kategori" />
+                <TableColumn fx:id="createdAtColumn" text="Created At" />
+                <TableColumn fx:id="updatedAtColumn" text="Updated At" />
+            </columns>
+            <BorderPane.margin>
+                <Insets left="5.0" right="5.0" top="10.0" />
+            </BorderPane.margin>
+        </TableView>
+    </center>
+</BorderPane>
